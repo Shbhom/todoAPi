@@ -1,0 +1,20 @@
+<script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+<style>
+    #mypost {
+        font-family:'Noto Sans', sans-serif;;
+    }
+</style>
+<div id="mypost"></div>
+<script>
+    fetch('https://raw.githubusercontent.com/Shbhom/todoAPi/main/Readme.md').then(response => response.text())
+        .then(data => {
+            console.log(data);
+            var converter = new showdown.Converter();
+            var md = data;
+            var html = converter.makeHtml(md);
+            document.querySelector('#mypost').innerHTML = html;
+        });
+</script>

@@ -1,4 +1,4 @@
-# TODOIST API Clone - Routes
+# TODOIST API Clone
 
 Below are the routes for the TODOIST API clone. The API provides various endpoints to manage tasks and categories for registered users. The routes are categorized based on their functionality.
 
